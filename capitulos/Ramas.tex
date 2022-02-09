@@ -1,0 +1,42 @@
+\chapterA{Ramas}
+
+Una característica muy importante de este tipo de sistemas de gestión de versiones son las ramas. Una rama puede definirse como un conjunto independiente de \textit{commits}.
+
+Al crear un repositorio tendremos una rama principal, normalmente llamada \textit{Master}(casi desechado en repositorios nuevos) o \textit{Main}. A partir de aquí podemos seleccionar un commit concreto y crear una rama a través de él.
+
+Supongamos que estamos en un equipo desarrollando una aplicación de gestión de bibliotecas. El encargado de la funcionalidad de alquilar libros no quiere interferir con el trabajo de su compañero que se está dedicando a hacer las consultas a la base de datos.
+Para esto, cada uno de ellos creará una rama para ir implementando su funcionalidad concreta. Cuando acaben pueden hacer un \textit{merge} a la rama principal, o en otras palabras, fusionar su código con la última versión de la rama principal.
+
+Aunque este es un caso factible, las ramas se suelen usar también para el desarrollo independiente de versiones o para parches.
+
+Tras entender lo que son las ramas, vamos a ver como gestionarlas
+
+\section{Crear una rama}
+
+Para poder gestionar una rama, primero tenemos que tenerla.
+
+En GitKtraken crearemos una rama nueva seleccionando un \textit{commit} y con click derecho seleccionando \textit{Create branch here}.
+En GitHub Desktop nos iremos al botón de ramas y ahí escogeremos la opción de crear una nueva.
+
+\section{Fusionar ramas}
+
+Antes se ha mencionado el fusionar una rama con la principal, pero también se pueden fusionar dos ramas secundarias. A esto lo llamaremos un \textit{merge}.
+
+Durante un \textit{merge} puede haber conflictos entre archivos. Esto ocurrirá cuando dos fragmentos de código no se puedan solapar automáticamente y se nos pedirá arreglarlo.
+GitKraken te permite seleccionar las líneas de código a mantener entre los posibles conflictos desde su propia interfaz. Tanto GitKraken como GitHub Desktop te permitirán arreglar esto en editores externos como Code, Vim o Atom, por nombrar unos ejemplos.
+
+Desde GitKraken nos dará la opción de fusionar dos ramas si arrastramos la etiqueta de la rama que queremos fusionar hacia la etiqueta de la rama que va a recibir el \textit{merge}.
+
+En GitHub Desktop nos iremos a la barra de opciones de arriba de la pantalla y en ramas podremos ver la opción \textit{Merge into current branch}. Esto significa que tendremos que ejecutar esta opción desde la rama que va a recibir el \textit{merge} y seleccionar la rama a fusionar.
+
+\section{Cherry Pick}
+
+Cherry Pick es el nombre que recibe la acción de aplicar solo cierto \textit{commit} de una rama a otra.
+
+Esto puede ser útil en el desarrollo de una programa si en cierto punto de una rama se detecta un \textit{bug} que afecta al resto.
+
+Esta opción no se da en GitHub ni en su versión web ni en su aplicación de escritorio, pero en GitKraken es tan fácil como hacer click derecho en el \textit{commit} y seleccionar \textit{Cherry pick commit}.
+
+\section{Reorganizar ramas}
+
+El comando \textbf{rebase} puede ser útil en algunas situaciones. Es parecido a \textit{merge}, pero mientras que éste último cierra la rama al terminar la fusión, \textit{rebase} solo fusiona el código manteniendo ambas ramas como independientes.

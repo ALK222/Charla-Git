@@ -1,0 +1,49 @@
+\documentclass[twoside]{AiTeX}
+
+
+
+\title{Estructura de Computadores}
+\author{A.L.K.}
+\date{septiembre 2020}
+\begin{document}
+%\datos{facultad}{universidad}{grado}{asignatura}{subtitulo}{autor}{curso}
+\datos{Informática}{Universidad Complutense de Madrid}{Ingeniería informática}{Resumen de GIT y GitHub}{Resumen de la charla del día 9/2/22}{Alejandro Barrachina Argudo}{2021-2022}
+\portadaApuntes
+\pagestyle{empty}
+\tableofcontents
+\pagestyle{empty}
+\justify
+
+\input{capitulos/Introducción.tex}
+\input{capitulos/Manejo.tex}
+\input{capitulos/Ramas.tex}
+
+
+\chapterA{Figuras explicativas}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Capura-Git.PNG}
+    \caption{Captura de pantalla de GitHub Desktop}
+    \label{fig:cap_git}
+\end{figure}
+
+En el caso de este programa, el botón 2 cambiará de opción automáticamente si hay o no código que subir o que bajar
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Capura-Kraken.PNG}
+    \caption{Captura de pantalla de GitKraken}
+    \label{fig:cap_kraken}
+\end{figure}
+
+\printglossary[title={Glosario}]
+
+\let\cleardoublepage\clearpage
+\listoffigures
+\addcontentsline{toc}{chapter}{Índice de figuras}
+\let\cleardoublepage\clearpage
+
+\listoftables
+\addcontentsline{toc}{chapter}{Índice de cuadros}
+\end{document}
